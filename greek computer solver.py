@@ -1,37 +1,21 @@
 import pandas as pd
 import numpy as np
+import gcf
+import wheels
 
-e = np.nan
-empty_row = [e, e, e, e, e, e, e, e, e, e, e, e]
+one = wheels.one
+two = wheels.two
 
-wheel_1 = np.array([[10, e, 7, e,15, e, 8, e, 3, e, 6, e],
-                  empty_row,
-                  empty_row,
-                  empty_row])
+level1 = np.array([one[0],two[0]])
+level2 = np.array([one[1],two[1]])
 
-wheel_2 = np.array([[11, 6,11, e, 6,17, 7, 3, e, 6, e,11],
-                    [14, e, 9, e,12, e, 4, e, 7,15, e, e],
-                    empty_row,
-                    empty_row])
+ring1 = gcf.ring(level1)
+ring2 = gcf.ring(level2)
 
-level = np.array([wheel_1[0],wheel_2[0]])
+print(two)
 
-def ring(level):
+two = np.roll(two,shift = 1, axis = 1)
 
-    r = []
-    level_t = level.T
+print(two)
 
-    for row in level_t:
-        mask = np.isfinite(row)
-        row = row[mask]
-        if row.size > 0:
-            r.append(row[0])
-        else:
-            r.append(e)
-    
-    return np.array(r)
-
-ring1 = ring(level)
-
-print(ring1)
 
