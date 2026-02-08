@@ -3,12 +3,27 @@ import numpy as np
 e = np.nan
 empty_row = [e, e, e, e, e, e, e, e, e, e, e, e]
 
-one = np.array([[10, e, 7, e,15, e, 8, e, 3, e, 6, e],
-                empty_row,
-                empty_row,
-                empty_row])
+one =   np.array([[10, e, 7, e,15, e, 8, e, 3, e, 6, e],
+                   empty_row,
+                   empty_row,
+                   empty_row])
 
-two = np.array([[11, 6,11, e, 6,17, 7, 3, e, 6, e,11],
-                [14, e, 9, e,12, e, 4, e, 7,15, e, e],
-                empty_row,
-                empty_row])
+two =   np.array([[11, 6,11, e, 6,17, 7, 3, e, 6, e,11],
+                  [14, e, 9, e,12, e, 4, e, 7,15, e, e],
+                   empty_row,
+                   empty_row])
+
+three = np.array([[ 9, 7,13,21,17, 4, 5, e, 7, 8, 9,13],
+                  [15, 4, 9,18,11,26,14, 1,12, e,21, 6],
+                  [10, e, 8, e,22, e,16, e, 9, e, 5, e],
+                   empty_row])
+
+four =  np.array([[ 9, e, 7,14,11, e, 8, e,16, 2, 7, e],
+                  [12, 3, 6, e,14,12, 3, 8, 9, e, 9,20],
+                  [ 6, e, 2,13, 9, e,17,19, 3,12, 3,26],
+                  [ 9, e,12, e, 6, e,10, e,10, e, 1, e]])
+
+five =  np.array([[14,11,14,11,11,14,11,14,11,14,14,11],
+                  [13,14,15, 4, 5, 6, 7, 8, 9,10,11,12],
+                  [21, 9, 9, 4, 4, 6, 6, 3, 3,14,14,21],
+                  [ 8, 7, 8, 8, 3, 4,12, 2, 5,10, 7,16]])

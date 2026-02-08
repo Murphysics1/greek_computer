@@ -3,19 +3,21 @@ import numpy as np
 import gcf
 import wheels
 
-one = wheels.one
-two = wheels.two
+one   = wheels.one
+two   = wheels.two
+three = wheels.three
+four  = wheels.four
+five  = wheels.five
 
-level1 = np.array([one[0],two[0]])
-level2 = np.array([one[1],two[1]])
+levels = []
+rings = []
 
-ring1 = gcf.ring(level1)
-ring2 = gcf.ring(level2)
+for idx in range(1,5):
+    levels.append(gcf.level(idx))
 
-print(two)
+for r in range(1,5):
+    rings.append(gcf.ring(levels[r-1]))
 
-two = np.roll(two,shift = 1, axis = 1)
+rings = np.array(rings)
 
-print(two)
-
-
+print(rings)

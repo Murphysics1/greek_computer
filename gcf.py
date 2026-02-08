@@ -1,4 +1,5 @@
 import numpy as np
+import wheels
 
 def ring(level):
 
@@ -14,3 +15,13 @@ def ring(level):
             r.append(np.nan)
     
     return np.array(r)
+
+def level(idx):
+
+    arr = [wheels.one[idx],
+           wheels.two[idx],
+           wheels.three[idx],
+           wheels.four[idx],
+           wheels.five[idx]]
+
+    return np.array(arr)
